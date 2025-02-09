@@ -40,8 +40,6 @@ def upload():
         results = process_csv("uploads/"+filename)
 
         # Add the results to the csv file
-        add_results_to_csv(filename , results)
-        file.save(file_path)
 
         # Return the results page with the results loaded
         return render_template("results.html", results=results)
